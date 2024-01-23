@@ -1,10 +1,13 @@
 import { useState } from "react";
 import "./App.css";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <>
-      <div>Jas Krrish Singh</div>
+      <div className="bg-black w-screen h-screen">
+        <Home />
+      </div>
     </>
   );
 }

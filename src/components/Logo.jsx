@@ -1,7 +1,11 @@
 import React from "react";
 
 function Logo({ width = "100px" }) {
-  return <div>Jas Krrish Singh Logo</div>;
+  return (
+    <div>
+      <img src="../assets/Logo.png" alt="Logo" />
+    </div>
+  );
 }
 
 export default Logo;

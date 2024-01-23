@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Logo from "../Logo";
 import { IoIosWallet } from "react-icons/io";
 
 function Header() {
@@ -33,33 +34,58 @@ function Header() {
 
   return (
     <>
-      <nav className="bg-black">
+      <nav className="bg-grey-400 bg-opacity-10 backdrop-filter-sm ">
         <div className="flex justify-center items-center">
           <div className="m-4 p-4">
-            <a href="" className="text-2xl text-white font-semibold ">
-              NiFT
+            <a href="/" className="text-2xl  ">
+              <img src="src/assets/Logo.png" alt="Logo" width={88} />
             </a>
           </div>
           <div className="mx-4 ml-auto mr-8">
-            <ul className="text-white flex text-xl font-sans items-center justify-center ">
-              <li className="mx-3 ">
-                <a href="">Home</a>
+            <ul className="text-white mx-5 ml-5 flex text-xl font-sans items-center justify-center font-Inter">
+              <li className="mx-4 ">
+                <a
+                  href=""
+                  className="active:underline active:text-[#99ff53] hover:underline hover:text-[#99ff53] cursor-pointer"
+                >
+                  Home
+                </a>
               </li>
               <li className="mx-3">
-                <a href="">Explore</a>
+                <a
+                  href=""
+                  className="active:underline active:text-[#99ff53] hover:underline hover:text-[#99ff53] cursor-pointer"
+                >
+                  Explore
+                </a>
               </li>
               {isWalletConnected ? (
                 <div className="flex">
                   <li className="mx-3">
-                    <a href="">MarketSpace</a>
+                    <a
+                      href=""
+                      className="active:underline active:text-[#99ff53] hover:underline hover:text-[#99ff53] cursor-pointer"
+                    >
+                      MarketSpace
+                    </a>
                   </li>
                   <li className="mx-3">
-                    <a href="">FundSpace</a>
+                    <a
+                      href=""
+                      className="active:underline active:text-[#99ff53] hover:underline hover:text-[#99ff53] cursor-pointer"
+                    >
+                      FundSpace
+                    </a>
                   </li>
                 </div>
               ) : null}
               <li className="mx-3">
-                <a href="">About Us</a>
+                <a
+                  href=""
+                  className="active:underline active:text-[#99ff53] hover:underline hover:text-[#99ff53] cursor-pointer"
+                >
+                  About Us
+                </a>
               </li>
 
               {isWalletConnected ? (
@@ -86,7 +112,7 @@ function Header() {
                 </div>
               ) : (
                 <button
-                  className="m-4 bg-[#99ff53] rounded-xl p-3 text-black"
+                  className="m-4 bg-[#99ff53] rounded-xl p-3 text-black font-Inter font-semibold"
                   onClick={changeMetaMask}
                 >
                   Connect Your Wallet
